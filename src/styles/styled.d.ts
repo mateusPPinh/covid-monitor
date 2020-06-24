@@ -1,0 +1,18 @@
+import 'styled-components';
+
+declare module 'styled-components' {
+  export interface DefaultTheme {
+    title: string;
+
+    colors: {
+      error: string;
+      title: string;
+      titleSecundary: string;
+      text: string;
+      textSecundary: string;
+      button: string;
+      shape: string;
+      background: string;
+    };
+  }
+}
