@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useRouteMatch } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 import api from '../../services/api';
 import logo from '../../assets/logo.svg';
@@ -27,7 +28,7 @@ const CasesDescription: React.FC = () => {
   useEffect(() => {
     async function loadData(): Promise<void> {
       const [repositoryResponse] = await Promise.all([
-        api.get(`/api/report/v1/brazil/uf${params.repository}`),
+        api.get(`/api/report/v1/brazil/uf/${params.repository}`),
       ]);
 
       setCases(repositoryResponse.data);
@@ -38,6 +39,9 @@ const CasesDescription: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Covid-19 Monitor | Dados do {params.repository}</title>
+      </Helmet>
       {cases && (
         <RepositoryInfo>
           <header>
@@ -48,7 +52,7 @@ const CasesDescription: React.FC = () => {
           </header>
           <ul>
             <li>
-              <strong>{cases.refuses}</strong>
+              <strong>{cases.deaths}</strong>
               <span>Nº de mortes</span>
             </li>
             <li>
@@ -58,6 +62,10 @@ const CasesDescription: React.FC = () => {
             <li>
               <strong>{cases.suspects}</strong>
               <span>Casos suspeitos</span>
+            </li>
+            <li>
+              <strong>{cases.refuses}</strong>
+              <span>Negativos</span>
             </li>
           </ul>
         </RepositoryInfo>

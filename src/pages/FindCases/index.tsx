@@ -1,6 +1,7 @@
 import React, { useState, useEffect, FormEvent } from 'react';
 import { Link } from 'react-router-dom';
 import { FiChevronRight } from 'react-icons/fi';
+import { Helmet } from 'react-helmet';
 
 import { Title, Form, Repositories, Error } from './styles';
 import logo from '../../assets/logo.svg';
@@ -52,6 +53,9 @@ const FindCases: React.FC = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Covid-19 Monitor | Home</title>
+      </Helmet>
       <Title>Digite a UF e obtenha info sobre os dados da Covid-19</Title>
 
       <Form hasError={!!inputError} onSubmit={handleAddRepository}>
@@ -67,7 +71,7 @@ const FindCases: React.FC = () => {
 
       <Repositories>
         {cases.map(casest => (
-          <Link key={casest.state} to={`/cases-description/${casest.state}`}>
+          <Link key={casest.state} to={`/cases-description/${casest.uf}`}>
             <img src={logo} alt="Pick" />
             <div>
               <strong>{casest.state}</strong>

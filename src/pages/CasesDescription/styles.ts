@@ -17,7 +17,7 @@ export const RepositoryInfo = styled.section`
         color: ${props => props.theme.colors.titleSecundary};
       }
       p {
-        font-size: 18px;
+        font-size: 23px;
         color: ${props => props.theme.colors.text};
         margin-top: 4px;
       }
