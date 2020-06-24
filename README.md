@@ -10,4 +10,4 @@ Aproveitei conhecimento do Bootcamp para criar essa interface.
 
 Link do deploy:
 
-**hhttps://covid-monitor-pied.vercel.app/**
+**https://covid-monitor-pied.vercel.app/**
