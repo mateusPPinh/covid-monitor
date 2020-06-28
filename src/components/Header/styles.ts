@@ -34,3 +34,11 @@ export const Container = styled.header`
     }
   }
 `;
+
+export const SplitContent = styled.div`
+  margin-left: 10px;
+
+  a {
+    margin-right: 1.5rem;
+  }
+`;

@@ -40,7 +40,7 @@ const CasesDescription: React.FC = () => {
   return (
     <>
       <Helmet>
-        <title>Covid-19 Monitor | Dados do {params.repository}</title>
+        <title>Dados do {params.repository}</title>
       </Helmet>
       {cases && (
         <RepositoryInfo>

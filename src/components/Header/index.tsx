@@ -6,7 +6,7 @@ import { ThemeContext } from 'styled-components';
 
 import logoImg from '../../assets/logo.svg';
 
-import { Container } from './styles';
+import { Container, SplitContent } from './styles';
 
 interface HaederProps {
   toggleTheme(): void;
@@ -24,6 +24,14 @@ const Header: React.FC<HaederProps> = ({ toggleTheme }) => {
         <div>
           <img src={logoImg} alt="GitHub Explorer" />
           <strong>Covid-19 Brazil</strong>
+        </div>
+        <SplitContent>
+          {pathname !== '/' && (
+            <Link to="/">
+              <FiChevronLeft size={16} />
+              Voltar
+            </Link>
+          )}
           <Switch
             onChange={toggleTheme}
             checked={title === 'dark'}
@@ -37,13 +45,7 @@ const Header: React.FC<HaederProps> = ({ toggleTheme }) => {
             offHandleColor="#534F5E"
             onColor="#F4EDE8"
           />
-        </div>
-        {pathname !== '/' && (
-          <Link to="/">
-            <FiChevronLeft size={16} />
-            Voltar
-          </Link>
-        )}
+        </SplitContent>
       </Container>
     </>
   );

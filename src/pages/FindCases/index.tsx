@@ -47,7 +47,7 @@ const FindCases: React.FC = () => {
       setInputError('');
       setNewCase('');
     } catch (err) {
-      setInputError('Erro na busca por esse repositório');
+      setInputError('Erro na busca por essa UF, tente novamente.');
     }
   }
 
