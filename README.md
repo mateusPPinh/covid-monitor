@@ -6,8 +6,6 @@ A api usada para consumir os dados foi **https://covid19-brazil-api.now.sh/**
 
 Fica registrado os créditos ao Arthur Ribeiro e Pedro Queiroz pela criação.
 
-Aproveitei conhecimento do Bootcamp para criar essa interface.
-
 Link do deploy:
 
 **https://covid-monitor-pied.vercel.app/**
