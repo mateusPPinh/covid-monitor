@@ -1,9 +1,6 @@
 /* eslint-disable import/no-duplicates */
 import { createGlobalStyle, css } from 'styled-components';
 
-// import githubBackground from '../assets/logo.svg';
-// import githubBackgroundDark from '../assets/logo.svg';
-
 export default createGlobalStyle`
   * {
     margin:0;
